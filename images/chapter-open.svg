@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="270" viewBox="0 0 800 270" role="img" aria-label="기록 펼치기">
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f1d9aa"/><stop offset=".55" stop-color="#d6ac75"/><stop offset="1" stop-color="#c99560"/></linearGradient>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".07" numOctaves="3" seed="13" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".13"/></feComponentTransfer></filter>
+<filter id="shadow"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<path d="M45 41 L133 25 198 33 281 17 357 28 448 21 534 31 616 17 692 29 768 18 751 67 771 112 757 176 768 212 709 238 624 228 536 245 467 233 377 248 298 235 199 250 119 228 44 237 18 188 28 127 19 81 Z" transform="translate(4 9)" fill="#362010" opacity=".42" filter="url(#shadow)"/>
+<path d="M45 41 L133 25 198 33 281 17 357 28 448 21 534 31 616 17 692 29 768 18 751 67 771 112 757 176 768 212 709 238 624 228 536 245 467 233 377 248 298 235 199 250 119 228 44 237 18 188 28 127 19 81 Z" fill="url(#paper)" stroke="#a77a50" stroke-width="5"/>
+<path d="M45 41 L133 25 198 33 281 17 357 28 448 21 534 31 616 17 692 29 768 18 751 67 771 112 757 176 768 212 709 238 624 228 536 245 467 233 377 248 298 235 199 250 119 228 44 237 18 188 28 127 19 81 Z" filter="url(#grain)" opacity=".32"/>
+<g transform="translate(110 144)" fill="none" stroke="#695032" stroke-width="2.5" stroke-linecap="round" opacity=".8">
+<path d="M0 64 Q24 24 19 -56 M18 -12 Q-2 -34 -31 -34 Q-19 -5 18 -12 M18 1 Q43 -29 75 -25 Q56 -2 18 1 M17 31 Q-4 15 -35 21 Q-16 43 17 31"/>
+<path d="M17 -43 Q-1 -66 6 -84 Q25 -75 17 -43 M17 -43 Q29 -69 46 -63 Q43 -42 17 -43 M17 -43 Q41 -46 49 -28 Q24 -23 17 -43 M17 -43 Q-4 -47 -11 -63 Q8 -68 17 -43"/>
+<circle cx="18" cy="-43" r="6" fill="#8b603c" stroke="none"/>
+</g>
+<text x="415" y="160" text-anchor="middle" font-size="85" fill="#4a2c18" font-family="'Nanum Pen Script','Nanum Brush Script','UnPilgi','Gungsuh','Batang',serif" letter-spacing="1">기록 펼치기</text>
+<path d="M257 191 Q325 202 382 191 M455 194 Q523 208 626 188" stroke="#765337" stroke-width="2.7" fill="none" opacity=".8"/>
+<path d="M680 124 l33 18 -33 18" stroke="#614026" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
