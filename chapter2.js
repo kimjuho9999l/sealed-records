@@ -56,7 +56,13 @@ function renderSort(){const ordered=st.sortOrder.map((id,i)=>{let p=D.photos.fin
  $('c2-sort-note').textContent=st.sortSolved?'사진 순서 확인 완료.':'사진을 이동한 뒤 순서를 확인하세요.';}
 function changeSort(from,to,drag=false){if(from<0||to<0||from>=7||to>=7||from===to)return;if(drag){let [x]=st.sortOrder.splice(from,1);st.sortOrder.splice(to,0,x)}else{[st.sortOrder[from],st.sortOrder[to]]=[st.sortOrder[to],st.sortOrder[from]]}st.sortSolved=false;save();renderSort()}
 function checkSort(){const match=st.sortOrder.every((id,i)=>id===D.correctOrder[i]);$('c2-sort-note').textContent=match?'사진을 시간순으로 정리했습니다.':'아직 맞지 않는 순서가 있습니다. 사진과 편지를 다시 비교해 보세요.';if(match){st.sortSolved=true;save();checkComplete()}}
-function renderFinish(){const done=st.completed;const box=$('c2-finish-text');box.innerHTML=done?'<p>두 여행 가방은 열차 안에서 서로 뒤바뀐 것으로 확인되었다.</p><p>아서와 낯선 여성은 다음 날 역에서 각자의 가방을 되찾았다.</p><p>여성의 이름과 이후 행적은 기록되어 있지 않다.</p><p><strong>기록 복원이 완료되었습니다.</strong></p>':`<p>편지 복원 ${filledCount()} / 8</p><p>사물 기록 ${recordsCount()} / 3</p><p>사진 순서 ${st.sortSolved?'확인 완료':'미확인'}</p><p>세 기록을 모두 정리하면 다음 장이 열립니다.</p>`;}
+function renderFinish(){const done=st.completed;const box=$('c2-finish-text');box.innerHTML=done?'<p>두 여행 가방은 열차 안에서 서로 뒤바뀐 것으로 확인되었다.</p><p>아서와 낯선 여성은 다음 날 역에서 각자의 가방을 되찾았다.</p><p>여성의 이름과 이후 행적은 기록되어 있지 않다.</p><p><strong>기록 복원이 완료되었습니다.</strong></p>':`<p>편지 복원 ${filledCount()} / 8</p><p>사물 기록 ${recordsCount()} / 3</p><p>사진 순서 ${st.sortSolved?'확인 완료':'미확인'}</p><p>세 기록을 모두 정리하면 다음 장이 열립니다.</p>`;
+ const controls=document.getElementById('c2-finish-controls');
+ if(controls){
+  const existing=controls.querySelector('#c2-ch3-link');
+  if(done&&!existing){const sealed=controls.querySelector('.c2-next-sealed');if(sealed)sealed.remove();const a=document.createElement('a');a.id='c2-ch3-link';a.className='button';a.href='chapter3.html';a.textContent='CHAPTER 03 — 떠날 준비 펼치기 →';controls.appendChild(a)}
+ }
+}
 $('c2-enter').addEventListener('click',()=>go(1));$('c2-go-workbook').addEventListener('click',()=>go(2));$('c2-prev').addEventListener('click',()=>go(st.page-1));$('c2-next').addEventListener('click',()=>go(st.page+1));$('c2-return-archive').addEventListener('click',()=>go(1));
 $('c2-restart').addEventListener('click',()=>{if(!confirm('챕터 2의 복원 기록만 초기화할까요? 챕터 1의 기록은 유지됩니다.'))return;try{localStorage.removeItem(KEY)}catch(e){}st=DEFAULT();go(0)});
 $('c2-close').addEventListener('click',close);$('c2-overlay').addEventListener('click',e=>{if(e.target===$('c2-overlay'))close()});

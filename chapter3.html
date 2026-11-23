@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<title>봉인된 기록 · CHAPTER 03 — 떠날 준비</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="chapter2.css"><link rel="stylesheet" href="chapter3.css">
+</head><body>
+<main id="game" aria-label="봉인된 기록 최종장">
+<section id="book" class="scene active">
+<div id="book-frame" class="c2-frame c3-frame">
+<div id="c3-page-0" class="spread active"><div class="c2-book-paper c2-cover">
+<section class="c2-cover-leaf"><div class="c2-handwriting">세 번째 기록의 봉인</div>
+<div class="c2-cover-stack"><img src="images/chapter3/photo_01.webp" alt="작은 침실 사진"><img src="images/chapter3/photo_04.webp" alt="오래된 카메라 사진"><img src="images/chapter3/photo_07.webp" alt="빈 창가 사진"></div>
+<small class="c2-quiet">ENGLAND · 1936–1938</small></section>
+<section class="c2-cover-leaf c2-cover-right"><span class="c2-kicker">CHAPTER III</span><h1>떠날 준비</h1><div class="c2-rule"></div><p>남겨진 집 안의 기록을<br>다시 펼쳐본다.</p>
+<button class="button" type="button" id="c3-enter">기록 펼치기 →</button><a class="c2-small-link" href="chapter2.html">← 두 번째 기록으로 돌아가기</a></section>
+</div></div>
+<div id="c3-page-1" class="spread"><div class="c2-book-paper">
+<section class="c2-leaf c2-archive-photos"><div class="c2-archive-heading"><small>PHOTOGRAPHS</small><h2>남겨진 사진들</h2><p>각 사진을 열어 사물과 공간을 자세히 살펴보세요.</p></div><div id="c3-photo-grid" class="c2-print-grid"></div></section>
+<section class="c2-leaf c2-archive-letters"><div class="c2-archive-heading"><small>CORRESPONDENCE</small><h2>두 통의 편지</h2><p>빈칸을 복원해도 마지막 서명은 아직 읽을 수 없습니다.</p></div>
+<div class="c2-letter-stack"><button class="c2-envelope" type="button" data-c3-letter="0"><span class="c2-wax">❦</span><span>오래된 편지</span><small>18 SEPTEMBER 1936</small></button>
+<button class="c2-envelope" type="button" data-c3-letter="1"><span class="c2-wax">✦</span><span>남겨진 편지</span><small>6 JUNE 1938 · 발신인 미상</small></button></div>
+<div class="c2-progress-archive"><span id="c3-observe-count">관찰 0건</span><span id="c3-fill-count">복원 0 / 8</span><button class="button light small" type="button" id="c3-go-connections">기록장과 증거 보기 →</button></div>
+</section></div></div>
+<div id="c3-page-2" class="spread"><div class="c2-book-paper">
+<section class="c2-leaf"><div class="c2-archive-heading"><small>OBJECT RECORDS</small><h2>사물 기록장</h2><p>물건의 주인과 사용한 사람, 발견된 장소를 구별하세요.</p></div><div class="c2-object-list" id="c3-object-list"></div><p id="c3-object-note" class="c2-mini-feedback" role="status"></p></section>
+<section class="c2-leaf"><div class="c2-archive-heading"><small>RECORD CONNECTIONS</small><h2>기록 연결하기</h2><p>서로 다른 챕터의 증거를 선택하세요. 선택한 두 자료를 나란히 비교할 수 있습니다.</p></div><div id="c3-link-list" class="c3-link-list"></div><p id="c3-links-note" class="c2-mini-feedback" role="status"></p></section>
+</div></div>
+<div id="c3-page-3" class="spread"><div class="c2-book-paper">
+<section class="c2-leaf c3-final-questions"><div class="c2-archive-heading"><small>FINAL INFERENCE</small><h2>마지막 추리</h2><p>모든 자료를 연결한 후 질문에 답하세요.</p></div>
+<div class="c3-question-card"><label for="c3-final-person">기차역에서 아서와 함께 있었고, 집의 작은 방에 머물던 사람은 누구인가?</label><input id="c3-final-person" maxlength="80" autocomplete="off" placeholder="인물 이름"><p id="c3-person-status" role="status"></p></div>
+<div class="c3-question-card"><label for="c3-final-purpose">그 사람이 이 집에서 물건을 정리한 이유는 무엇인가?</label><textarea id="c3-final-purpose" rows="3" maxlength="220" placeholder="이유를 짧게 적어 주세요"></textarea><p id="c3-purpose-status" role="status"></p></div>
+<button type="button" class="button" id="c3-final-check">추리 확인</button></section>
+<section class="c2-leaf c3-final-side"><div class="c2-archive-heading"><small>CASE FILE</small><h2>확인한 자료</h2></div><div id="c3-ready-report" class="c3-ready-report"></div><p>사진과 편지를 다시 살펴볼 수 있습니다. 한 질문을 맞혔다고 나머지 기록의 답이 공개되지는 않습니다.</p><button class="button light small" id="c3-final-back" type="button">← 기록 다시 살펴보기</button></section>
+</div></div>
+<div id="c3-page-4" class="spread"><div class="c2-book-paper c3-ending-book">
+<section class="c2-leaf c3-ending-photo"><div class="c2-archive-heading"><small>LAST PHOTOGRAPH</small><h2>마지막 사진</h2></div><button type="button" id="c3-ending-zoom" aria-label="마지막 사진 확대"><img src="images/chapter3/photo_07.webp" alt="창가에 놓인 빈 의자와 마지막 편지"></button><p>빈 창가 · PHOTO 07</p></section>
+<section class="c2-leaf c3-ending-text"><div class="c2-archive-heading"><small>RESTORED ARCHIVE</small><h2>《봉인된 기록 — 마지막 기록》</h2></div><div id="c3-ending-body"></div><button class="button light small" id="c3-again" type="button">사진과 편지 다시 보기</button><div class="c3-chapter-links"><a href="index.html">CHAPTER 01</a><a href="chapter2.html">CHAPTER 02</a><a href="chapter3.html">CHAPTER 03</a></div></section>
+</div></div>
+<button class="pagenav prev" type="button" id="c3-prev" aria-label="이전 페이지">‹</button><button class="pagenav next" type="button" id="c3-next" aria-label="다음 페이지">›</button>
+<div class="page-number" id="c3-page-number">01 / 05</div><a class="c3-ch2-link" href="chapter2.html">CHAPTER II</a><button type="button" id="c3-restart">이 기록 초기화</button>
+</div></section>
+<div id="c3-gate" hidden><div class="c3-gate-paper"><small>ARCHIVE · SEALED</small><h1>아직 열 수 없는 기록</h1><p>두 번째 기록을 모두 복원한 뒤 이 장을 펼칠 수 있습니다.</p><a href="chapter2.html" class="button">CHAPTER II로 돌아가기</a></div></div>
+<div id="c2-overlay" aria-hidden="true"><div id="c2-dialog" role="dialog" aria-modal="true" aria-label="자료 자세히 보기"><button id="c2-close" type="button" aria-label="닫기">×</button><div id="c2-dialog-body"></div></div></div>
+</main>
+<script src="chapter1-data.js"></script><script src="chapter2-data.js"></script><script src="chapter3-data.js"></script><script src="chapter3.js"></script></body></html>
