@@ -126,3 +126,8 @@ html,body{overflow:auto!important}
 .c2-zoom-stage{height:42dvh}.c2-photo-side{padding:14px 16px}.c2-photo-side .c2-observation{min-height:60px}
 .c2-letter-sheet{max-height:90dvh}.c2-cover-stack{min-height:260px;width:80%}
 }
+
+/* SVG silhouette hotspots: click target is the painted polygon, not its bounding box. */
+.c2-spot-layer{position:absolute;inset:0;width:100%;height:100%;z-index:4;overflow:visible;pointer-events:none}
+.c2-spot-layer .c2-photo-hot{fill:transparent;stroke:none;cursor:crosshair;pointer-events:visibleFill;outline:none;transition:fill .13s,stroke .13s}
+.c2-spot-layer .c2-photo-hot:hover,.c2-spot-layer .c2-photo-hot:focus-visible,.c2-spot-layer .c2-photo-hot.selected,.c2-zoom-stage.show-spots .c2-spot-layer .c2-photo-hot{fill:#ffe0a21f;stroke:#f3d9a0;stroke-width:.3;vector-effect:non-scaling-stroke}

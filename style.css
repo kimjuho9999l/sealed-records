@@ -164,3 +164,8 @@
 /* Letter body remains scrollable regardless of its length. */
 .detail-letter{max-height:100%;overflow:auto}
 @media(max-width:700px){.archive-ch01 .letter-tactile{height:23%}.archive-ch01 .wax-seal{left:41%;top:50%}.manual-restore>div{flex-wrap:wrap}.manual-restore input{width:100%;flex:auto}}
+
+/* SVG silhouette hotspots: click target is the painted polygon, not its bounding box. */
+.target-wrap .spot-layer{position:absolute;inset:0;width:100%;height:100%;z-index:4;overflow:visible;pointer-events:none}
+.target-wrap .spot-layer .spot{fill:transparent;stroke:none;cursor:crosshair;pointer-events:visibleFill;outline:none;transition:fill .13s,stroke .13s}
+.target-wrap .spot-layer .spot:hover,.target-wrap .spot-layer .spot:focus-visible,.target-wrap.show-areas .spot-layer .spot{fill:#f6d37c3e;stroke:#ffda90;stroke-width:.3;vector-effect:non-scaling-stroke}
